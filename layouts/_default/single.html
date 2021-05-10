@@ -1,0 +1,13 @@
+{{ define "title" }} {{ .Title }} &ndash; 
+{{ .Site.Title }} {{ end }} 
+
+{{ define "main" }}
+<main>
+
+    セクション名: {{ with .Section }}{{ . }}{{ else }}なし{{ end }}
+
+  <article>
+    {{ .Content }}
+  </article>
+</main>
+{{ end }}
