@@ -5,7 +5,13 @@
 </div>
 
 <div>
-  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }} <!--2019 and 0001 ?-->
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ .CurrentSection }}
+  {{ if eq .CurrentSection "Pages" }}
+  yes
+  {{ else }}
+  no
+  {{ end }}
 
   {{ range $pages.GroupByDate "2006" }}
 
