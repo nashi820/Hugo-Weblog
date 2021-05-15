@@ -6,9 +6,9 @@
   -->
 
     <body>
-      {{ block "main" . }}
-      <!-- define "main"の内容が表示される -->
-      {{ end }}
+      {{- partial "header.html" . -}}
+      {{ block "main" . }}{{ end }}<!-- define "main"の内容が表示される -->
+      {{- partial "footer.html" . -}}
     </body>
 
     <!--
