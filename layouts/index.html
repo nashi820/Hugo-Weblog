@@ -1,13 +1,8 @@
 {{ define "title" }} {{ .Title }} &ndash;
 {{ .Site.Title }} {{ end }}
 
-
 {{ define "main" }}
 <main>
-  <!-- root直下の/content/post/内の記事を10個まで表示 -->
-  <!-- rangeはループ -->
-  <!-- range where site.RegularPages "Type" "in" site.Params.mainSections -->
     {{ .Render "list"}}
-  <!-- end -->
 </main>
 {{ end }}
