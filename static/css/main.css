@@ -18,6 +18,18 @@
     color: #FFFFFF;
 }
 
+/* リンクの下線を消す */
+.head__inner a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* カーソルを合わせたときにリンクの下線を表示する */
+.head__inner a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
 /* 横線 */
 hr.border-style{
   border-top: 1px solid #8c8b8b;
