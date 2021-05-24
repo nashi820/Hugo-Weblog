@@ -3,11 +3,25 @@
 
 {{ define "main" }}
 <main>
+  <!--セクション名: {{ with .Section }}{{ . }}{{ else }}なし{{ end }}-->
 
-    セクション名: {{ with .Section }}{{ . }}{{ else }}なし{{ end }}
+  <div style="margin-top: 30px;margin-bottom: 30px;">
+    <h1 style="font-family: 'Dela Gothic One', cursive;">
+      {{ .Page.Title }} 
+    </h1>
+
+    <time datetime="{{ .Date.Format "2006-01-02" }}">
+    {{ .Date.Format "2006/01/02"}}
+    </time>
+
+    {{ partial "categories-list" . }}
+
+    <hr>
+  </div>
 
   <article>
     {{ .Content }}
   </article>
+
 </main>
 {{ end }}

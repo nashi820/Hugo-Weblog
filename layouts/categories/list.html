@@ -7,7 +7,7 @@
   {{ $categories_name := .Name }}
 
   <!-- 記事タイトルの一覧 -->
-  <ul class="post-list">
+  <ul class="post-list" style="font-size:20px;margin-bottom:18px;margin-top:18px;">
   {{ range .Pages }}
     <li>
       <time datetime="{{ .Date.Format "2006-01-02" }}">

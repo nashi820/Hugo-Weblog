@@ -5,11 +5,11 @@
     {{- partial "header.html" . -}}
   -->
 
-    <body>
+    <body style="background-color:#F4F5F7;">
+      <div class="container-fluid" style="max-width:600px;">
       {{partial "head" .}}
-      <div class="container">
       {{- partial "header.html" . -}}
-      {{ block "main" . }}{{ end }}<!-- define "main"の内容が表示される -->
+        {{ block "main" . }}{{ end }}<!-- define "main"の内容が表示される -->
       {{- partial "footer.html" . -}}
       </div>
     </body>
