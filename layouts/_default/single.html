@@ -10,11 +10,10 @@
       {{ .Page.Title }} 
     </h1>
 
-    <time datetime="{{ .Date.Format "2006-01-02" }}">
-    {{ .Date.Format "2006/01/02"}}
-    </time>
-
-    {{ partial "categories-list" . }}
+    <div style="font-size: 20px;">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02"}}</time>
+      {{ partial "categories-list" . }}
+    </div>
 
     <hr>
   </div>
