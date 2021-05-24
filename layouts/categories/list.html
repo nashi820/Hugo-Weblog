@@ -1,29 +1,25 @@
 {{ define "main" }}
 
-<div>
-    {{ range .Site.Taxonomies.categories.ByCount }}
-    <a href="{{ "/categories/" | relURL }}{{ .Name | urlize }}">{{ .Name }}</a>
-    {{ end }}
-</div>
+{{ partial "categories-header" .}}
 
 <div>
   {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
   {{ $categories_name := .Name }}
 
   <!-- 記事タイトルの一覧 -->
+  <ul class="post-list">
   {{ range .Pages }}
-    <div>
+    <li>
       <time datetime="{{ .Date.Format "2006-01-02" }}">
       {{ .Date.Format "2006/01/02"}}
       </time>
       <a href="{{ .Permalink }}">{{ .Title }}</a>
       
-      <!-- 記事のカテゴリーを表示 -->
-      {{ range $key, $value := .Params.categories }}
-      [{{ $value }}]
-      {{ end }}
-    </div>
+    {{ partial "categories-list" .}}
+  
+    </li>
   {{ end }}
+  </ul>
 </div>
 
 {{ end }}

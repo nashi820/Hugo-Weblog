@@ -45,3 +45,14 @@ hr.border-style{
     font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
     font-size: 2.4rem;
 }
+
+.post-list{
+    margin-left:0;
+    list-style:none;
+    font-size:18px;
+}
+
+.post-list li{
+    margin-bottom:5px;
+}
+

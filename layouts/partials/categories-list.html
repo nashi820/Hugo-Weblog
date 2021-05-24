@@ -1,0 +1,16 @@
+    <!-- 記事のカテゴリーを表示 -->
+    {{ range $key, $value := .Params.categories }}
+    
+      {{ if eq $value "themes" }}
+        <span class="badge badge-dark badge-pill">
+        {{ $value }}
+        </span>
+      {{ end }}
+
+      {{ if eq $value "syntax" }}
+        <span class="badge badge-success badge-pill">
+        {{ $value }}
+        </span>
+      {{ end }}
+
+    {{ end }}

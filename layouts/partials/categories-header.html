@@ -1,0 +1,19 @@
+<div style="font-size:18px;">
+  {{ range $key, $value := .Site.Taxonomies.categories.ByCount }}
+    <a href="{{ "/categories/" | relURL }}{{ .Name | urlize }}" style="text-decoration:none;">
+    
+      {{ if eq $value.Name "themes" }}
+        <span class="badge badge-dark badge-pill">
+          {{ $value.Name }}
+        </span>
+      {{ end }}
+
+      {{ if eq $value.Name "syntax" }}
+        <span class="badge badge-success badge-pill">
+          {{ $value.Name }}
+        </span>
+      {{ end }}
+    
+    </a>
+  {{ end }}
+</div>
