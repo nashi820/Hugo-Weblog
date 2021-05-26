@@ -5,4 +5,16 @@
     <h2><a href="{{ .Site.BaseURL }}" style="color:white;font-family: 'Dela Gothic One', cursive;">{{ .Site.Title }}</a></h2>
   </header>
 </div>
+
+<ul id="nav-links" class="list-inline mb-1">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+        <li class="list-inline-item">
+          <a href="{{ .URL }}" title="{{ .Title }}" style="color: white;font-weight: bold;">
+            {{ .Name }}
+          </a>
+        </li>
+    {{ end }}
+</ul>
+
 </nav>
