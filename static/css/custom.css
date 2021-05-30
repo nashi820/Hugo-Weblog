@@ -64,10 +64,11 @@ hr.border-style{
     color:#000;
     background:#ffff66;
 }
-                               
-                               
-                               
-                               
-                               
-                               
-                               
+
+h2{
+
+}
+
+#content{
+    font-size: 1.2rem;
+}
