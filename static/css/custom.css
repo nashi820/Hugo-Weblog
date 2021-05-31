@@ -65,10 +65,10 @@ hr.border-style{
     background:#ffff66;
 }
 
-h2{
-
-}
-
 #content{
     font-size: 1.2rem;
+}
+
+.foot__inner{
+  text-align: center;
 }
