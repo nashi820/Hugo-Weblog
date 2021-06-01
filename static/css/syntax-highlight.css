@@ -1,4 +1,4 @@
-/* Background "add margin"*/ .chroma { color: #f8f8f2; background-color: #272822; margin: auto;}
+/* Background "add margin"*/ .chroma { color: #f8f8f2; background-color: #272822; margin: 0.5rem;}
 /* .chroma { color: #f8f8f2; background-color: #272822;} */
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
