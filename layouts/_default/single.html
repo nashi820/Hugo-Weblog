@@ -10,6 +10,12 @@
       {{ .Page.Title }} 
     </h1>
 
+<!--
+    <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: 700;">
+      {{ .Page.Title }}
+    </h1>
+-->
+
     <div style="font-size: 20px;">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02"}}</time>
       {{ partial "categories-list" . }}
