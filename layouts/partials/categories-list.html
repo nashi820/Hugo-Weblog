@@ -1,37 +1,10 @@
-    <!-- 記事のカテゴリーを表示 -->
-    {{ range $key, $value := .Params.categories }}
 
-      {{ if eq $value $.Site.Params.category_info }}
-        <span class="badge badge-info badge;">
-          #{{ $value }}
-        </span>
+    {{$categories := .Params.categories}}
 
-      {{ else if eq $value $.Site.Params.category_success }}
-        <span class="badge badge-success badge;">
-          #{{ $value }}
-        </span>
-
-      {{ else if eq $value $.Site.Params.category_danger }}
-        <span class="badge badge-danger badge;">
-          #{{ $value }}
-        </span>
-
-      {{ else if eq $value $.Site.Params.category_primary }}
-        <span class="badge badge-primary badge;">
-          #{{ $value }}
-        </span>
-
-      {{ else if eq $value $.Site.Params.category_warning }}
-        <span class="badge badge-warning badge;">
-          #{{ $value }}
-        </span>
-
-      {{ else }}
-        <span class="badge badge-secondary badge;">
-          #{{ $value }}
+    {{ range $key, $value := $.Site.Params.categories }}
+      {{if in $categories $key}}
+        <span class="badge {{ $value.color }} badge;">
+          #{{ $key }}
         </span>
       {{ end }}
-
     {{ end }}
-
-{{$.Params.category_info}}
