@@ -1,45 +1,10 @@
+
 <div style="font-size:20px;margin-bottom:18px;margin-top:18px;">
-  {{ range $key, $value := .Site.Taxonomies.categories.ByCount }}
-    <a href="{{ "/categories/" | relURL }}{{ .Name | urlize }}" style="text-decoration:none;">
-
-
-      {{ if eq $value.Name "themes" }}
-        <span class="badge badge-info badge;">
-          #{{ $value.Name }}
-        </span>
-      {{ end }}
-
-      {{ if eq $value.Name "syntax" }}
-        <span class="badge badge-success badge;">
-          #{{ $value.Name }}
-        </span>
-      {{ end }}
-
-      {{ if eq $value.Name "test" }}
-        <span class="badge badge-danger badge;">
-          #{{ $value.Name }}
-        </span>
-      {{ end }}
-
-<!--
-      {{ if eq $value.Name "themes" }}
-        <button>
-          {{ $value.Name }}
-        </button>
-      {{ end }}
-
-      {{ if eq $value.Name "syntax" }}
-        <button>
-          {{ $value.Name }}
-        </button>
-      {{ end }}
-
-      {{ if eq $value.Name "test" }}
-        <button>
-        {{ $value.Name }}
-        </button>
-      {{ end }}
--->
+  {{ range $key, $value := $.Site.Params.categories }}
+    <a href="{{ "/categories/" | relURL }}{{ $key | urlize }}" style="text-decoration:none;">
+    <span class="badge {{ $value.color }} badge;">
+      #{{ $key }}
+    </span>
     </a>
   {{ end }}
 </div>
